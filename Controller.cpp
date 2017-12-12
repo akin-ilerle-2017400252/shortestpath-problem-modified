@@ -6,8 +6,8 @@ void Controller::findMinDist(string inputfile, string outputfile){
 
     towns = file.read(inputfile);
     vector<bool> defaultCoins;
-    defaultCoins.reserve(file.getNumOfThieves());
-    for(int i=0;i< file.getNumOfThieves();i++)
+    defaultCoins.reserve(file.getNumOfThieves()+1);
+    for(int i=0;i< file.getNumOfThieves()+1;i++)
         defaultCoins.push_back(false);
     towns[1]->updateDistance(defaultCoins,Distance(0,""));
 
